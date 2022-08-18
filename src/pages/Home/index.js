@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import MoviesContext from '../context/MoviesContext';
-import MovieRow from '../components/MovieRow';
-import FeaturedMovie from '../components/FeaturedMovie';
+import MoviesContext from '../../context/MoviesContext';
+import MovieRow from '../../components/MovieRow';
+import FeaturedMovie from '../../components/FeaturedMovie';
+import Header from '../../components/Header';
+import './Home.css';
 
 export default function Home() {
   const { movieList, featuredData } = useContext(MoviesContext);
@@ -9,10 +11,11 @@ export default function Home() {
 
   return (
     <div className="page">
+      <Header />
       { featuredData &&
         <FeaturedMovie />
       }
-      <section>
+      <section className="lists">
         {movieList.map((item, idx) => (
           <MovieRow
             key={ idx }

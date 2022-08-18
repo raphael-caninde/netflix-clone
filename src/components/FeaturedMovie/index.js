@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MoviesContext from '../context/MoviesContext';
+import MoviesContext from '../../context/MoviesContext';
 import './FeaturedMovie.css';
 
 export default function FeaturedMovie() {
